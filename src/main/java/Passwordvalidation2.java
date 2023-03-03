@@ -10,7 +10,7 @@ public class Passwordvalidation2 {
         }
         if (!containsDigit(password))
         {
-            return "your password must contain at least digit";
+            return "your password must contain at least 1 digit";
         }
         if (!passwordLength(password)){
             return "your password must contain at least 8 characters";

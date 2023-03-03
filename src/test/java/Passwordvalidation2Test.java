@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Passwordvalidation2Test {
 
     @Test
-    void shouldReturnTrueIfPasswordLongerThan8 (){
+    void shouldReturnTrueIfPasswordLongerThan7 (){
         //given
         String password = "12345678";
         //when
@@ -17,10 +17,33 @@ public class Passwordvalidation2Test {
     @Test
     void shouldReturnFalseIfPasswordShorterThan8 (){
         //given
-        String password = "lajsl";
+        String password = "la99jsl";
         //when
         boolean actual = Passwordvalidation2.passwordLength(password);
         //then
         assertEquals(false, actual);
 
-}}
+    }
+
+    @Test
+    void shouldReturnTrueifPasswordContainsDigit (){
+        //given
+        String password = "123";
+        //when
+        boolean actual = Passwordvalidation2.containsDigit(password);
+        //then
+        assertEquals(true, actual);
+    }
+
+    @Test
+    void shouldReturnFalseifPasswordDoesNotContainDigit (){
+        //given
+        String password = "adsfkj";
+        //when
+        boolean actual = Passwordvalidation2.containsDigit(password);
+        //then
+        assertEquals(false, actual);
+    }
+
+}
+

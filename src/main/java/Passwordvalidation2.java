@@ -15,13 +15,10 @@ public class Passwordvalidation2 {
         if (!passwordLength(password)) {
             return "your password must contain at least 8 characters";
         }
-
-            if (!isStringLowerCase(password)){
+        if (!isStringLowerCase(password)){
                 return "your password must contain at least 1 lower case character";
         }
-            return "your password is valid";
-
-
+        return "your password is valid";
     }
 
     public static boolean passwordLength(String password) {
